@@ -12,13 +12,15 @@ namespace NS804_Demo.Controllers
     {
         private readonly GenericRepository<Quote, long> _repository;
 
+
         public QuotesController() : base()
         {
             _repository = new GenericRepository<Quote, long>(_db);
         }
 
-         // GET: api/Quotes
-         public IQueryable<Quote> GetQuotes()
+        // GET: api/Quotes
+        [AllowAnonymous]
+        public IQueryable<Quote> GetQuotes()
         {
             return _repository.Get();
         }

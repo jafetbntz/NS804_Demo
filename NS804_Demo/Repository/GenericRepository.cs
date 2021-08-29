@@ -7,6 +7,12 @@ using System.Web;
 
 namespace NS804_Demo.Repository
 {
+    /// <summary>
+    /// GenericRepository<T, PK>, as it's name says is a generic
+    /// repository for the entities that extends BaseModel.
+    /// T refers to the model and PK is the type of the primary
+    /// key of this entity. 
+    /// </summary>
     public class GenericRepository<T, PK> where T : BaseModel<PK>
     {
 

@@ -8,6 +8,13 @@ using System.Web;
 
 namespace NS804_Demo.Models
 {
+    /// <summary>
+    /// BaseModel<PK> is used for creating an standard for
+    /// auditory information, primary key and logical delete
+    /// field (IsActive), so we avoid repeting code and we
+    /// can implement some general rules that apply to the
+    /// current models and those that can be included later.
+    /// </summary>
     public class BaseModel<PK>
     {
         [Key]

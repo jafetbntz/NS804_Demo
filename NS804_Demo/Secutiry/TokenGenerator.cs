@@ -9,8 +9,9 @@ using System.Web;
 namespace NS804_Demo.Secutiry
 {
     /// <summary>
-    /// JWT Token generator class using "secret-key"
-    /// more info: https://self-issued.info/docs/draft-ietf-oauth-json-web-token.html
+    /// JWT Token generator class using "secret-key",
+    /// make sure you have provided each one of the
+    /// items requiered in WebConfig's AppSettings.
     /// </summary>
     internal static class TokenGenerator
     {
