@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "2f7ec1cf-271e-422f-a67b-4f8c925af305",
+		"name": "NS804",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Demo",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"jafet@test.com\",\r\n    \"password\": \"JBh.4654654\",\r\n    \"confirmPassword\": \"JBh.4654654\",\r\n    \"addressLine1\": \"4500 Time Squere\",\r\n    \"addressLine2\": \"1234B\",\r\n    \"zipCode\": \"91000\",\r\n    \"city\": \"Neverland\",\r\n    \"state\": \"Narnia\",\r\n    \"phone\": \"1234654654654\",\r\n    \"firstName\": \"FFAA\",\r\n    \"lastName\": \"BBBBB\"\r\n }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44338/api/auth/register",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"jafet@test.com\",\r\n    \"password\": \"JBh.4654654\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44338/api/auth/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Quote - Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"El respeto al derecho ajeno es la paz\",\r\n    \"author\": \"Benito Juarez\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44338/api/quotes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"quotes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Quote - Put",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"text\": \"La vie e rose\",\r\n    \"author\": \"Edith La Pif\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44338/api/quotes/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"quotes",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Quote - Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/quotes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"quotes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Quote - Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/quotes/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"quotes",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Quote - Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/quotes/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"quotes",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Books",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImphZmV0QHRlc3QuY29tIiwibmJmIjoxNjMwMDk5OTYzLCJleHAiOjE2MzAxMDE3NjMsImlhdCI6MTYzMDA5OTk2MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0OTIyMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDkyMjAifQ.Bce5Hn06gZv8Q0fH4KrI-EfnqsAkB1uZOhnF5LL5OgM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44338/api/books",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users - Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44338/api/users/a3c63085-6aca-4503-aaee-9c0e07b6dd91",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"users",
+								"a3c63085-6aca-4503-aaee-9c0e07b6dd91"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users - Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"city\": \"Neverland 2.0\",\r\n    \"state\": \"Narnia 1\",\r\n    \"zipCode\": \"91000\",\r\n    \"addressLine1\": \"4500 Time Squere\",\r\n    \"addressLine2\": \"1234B\",\r\n    \"firstName\": \"FFAA\",\r\n    \"lastName\": \"BBBBB\",\r\n    \"email\": \"jafet@test.com\",\r\n    \"phoneNumber\": null\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44338/api/users/a3c63085-6aca-4503-aaee-9c0e07b6dd91",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44338",
+							"path": [
+								"api",
+								"users",
+								"a3c63085-6aca-4503-aaee-9c0e07b6dd91"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImphZmV0QHRlc3QuY29tIiwibmJmIjoxNjMwMjU2NDA1LCJleHAiOjE2MzAyNTgyMDUsImlhdCI6MTYzMDI1NjQwNSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0OTIyMCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDkyMjAifQ.fKhKKcYniUQ9k3tuSrUHQf-oETFb1yM8FqNUf6H_2X0",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
