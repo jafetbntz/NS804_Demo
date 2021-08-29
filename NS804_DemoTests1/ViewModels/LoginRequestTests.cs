@@ -16,7 +16,7 @@ namespace NS804_Demo.ViewModels.Tests
         {
             LoginRequest request = new LoginRequest();
 
-            Assert.Equals(request.IsValid(), false);
+            Assert.AreEqual(request.IsValid(), false);
         }
 
 
@@ -27,7 +27,7 @@ namespace NS804_Demo.ViewModels.Tests
             LoginRequest request = new LoginRequest();
             request.UserName = "SuperUser";
 
-            Assert.Equals(request.IsValid(), false);
+            Assert.AreEqual(request.IsValid(), false);
         }
 
 
@@ -37,7 +37,7 @@ namespace NS804_Demo.ViewModels.Tests
             LoginRequest request = new LoginRequest();
             request.Password = "SuperPassword";
 
-            Assert.Equals(request.IsValid(), false);
+            Assert.AreEqual(request.IsValid(), false);
         }
 
         [TestMethod()]
@@ -46,7 +46,7 @@ namespace NS804_Demo.ViewModels.Tests
             LoginRequest request = new LoginRequest();
             request.Password = "SuperPassword";
             request.UserName = "SuperUser";
-            Assert.Equals(request.IsValid(), true);
+            Assert.AreEqual(request.IsValid(), true);
         }
     }
 }
